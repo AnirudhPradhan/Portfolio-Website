@@ -950,7 +950,6 @@ main {
 
 
 
-
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
@@ -1010,11 +1009,11 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { background: hsl(240, 2%, 20%); }
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
   gap: 30px;
   margin-bottom: 10px;
 }
@@ -1105,6 +1104,40 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .filter-select {
+    font-size: var(--fs-5);
+  }
+
+  .project-title {
+    font-size: var(--fs-6);
+  }
+
+  .project-category {
+    font-size: var(--fs-7);
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-select {
+    padding: 10px 14px;
+  }
+
+  .project-title {
+    font-size: var(--fs-6);
+  }
+
+  .project-category {
+    font-size: var(--fs-7);
+  }
+
+  .project-img {
+    height: 150px; /* Adjusted for smaller screens */
+  }
+}
+
 
 
 
