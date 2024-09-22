@@ -1118,6 +1118,14 @@ main {
   .project-category {
     font-size: var(--fs-7);
   }
+  @media (max-width: 768px) {
+    .resume-image {
+      display: block; /* Show the image on mobile devices */
+      width: 100%; /* Make the image responsive */
+      max-width: 300px; /* Set a maximum width if desired */
+      margin: 0 auto; /* Center the image */
+    }
+  }
 }
 
 @media (max-width: 480px) {
