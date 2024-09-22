@@ -1118,15 +1118,29 @@ main {
   .project-category {
     font-size: var(--fs-7);
   }
-  @media (max-width: 768px) {
-    .resume-image {
-      display: block; /* Show the image on mobile devices */
-      width: 100%; /* Make the image responsive */
-      max-width: 300px; /* Set a maximum width if desired */
-      margin: 0 auto; /* Center the image */
-    }
+}
+.resume-download {
+  text-align: center; /* Center the content */
+}
+
+.download-content {
+  margin-top: 20px; /* Add some spacing */
+}
+
+.resume-image {
+  display: block; /* Show the image by default */
+  margin-top: 10px; /* Space between text and image */
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Set a maximum width */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .resume-image {
+    display: none; /* Hide the image on mobile devices */
   }
 }
+
 
 @media (max-width: 480px) {
   .filter-select {
