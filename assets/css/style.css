@@ -870,7 +870,6 @@ main {
 
 
 
-
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
@@ -934,7 +933,7 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Defines 2 columns */
+  grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 10px;
 }
