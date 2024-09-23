@@ -906,7 +906,7 @@ main {
   height: auto; /* Maintain aspect ratio */
   border: 1px solid var(--jet); /* Optional: Add a border around the preview */
   border-radius: 4px; /* Optional: Round the corners of the preview */
-  margin-top: -70px;
+  margin-top: -90px;
 }
 
 
