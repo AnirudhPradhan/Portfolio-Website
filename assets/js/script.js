@@ -13,6 +13,62 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () {
   elementToggleFunc(sidebar);
 });
+// Slider functionality
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const sliderContainer = document.querySelector('.slider-container');
+let autoSlideInterval;
+
+// Function to show the next slide
+function showNextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  const offset = -currentIndex * 100;
+  sliderContainer.style.transform = `translateX(${offset}%)`;
+}
+
+// Function to start auto-scrolling
+function startAutoScroll() {
+  autoSlideInterval = setInterval(showNextSlide, 3000);
+}
+
+// Function to stop auto-scrolling
+function stopAutoScroll() {
+  clearInterval(autoSlideInterval);
+}
+
+// Automatically change slides every 3 seconds
+startAutoScroll();
+
+// Stop auto-scrolling when the mouse enters the image
+sliderContainer.addEventListener('mouseenter', stopAutoScroll);
+
+// Start auto-scrolling when the mouse leaves the image
+sliderContainer.addEventListener('mouseleave', startAutoScroll);
+
+
+// JavaScript to scroll testimonials on mouse scroll
+const testimonialsList = document.querySelector('.testimonials-list');
+let scrollTimeout;
+
+testimonialsList.addEventListener('wheel', function(e) {
+  // Prevent default scroll behavior
+  e.preventDefault();
+
+  // Clear the previous timeout to ensure smooth scrolling
+  clearTimeout(scrollTimeout);
+
+  // Check the scroll direction
+  const isScrollingDown = e.deltaY > 0;
+
+  // Scroll the testimonials container based on direction
+  scrollTimeout = setTimeout(() => {
+    if (isScrollingDown) {
+      testimonialsList.scrollBy({ left: 300, behavior: 'smooth' }); // Scroll to the right (next testimonial)
+    } else {
+      testimonialsList.scrollBy({ left: -300, behavior: 'smooth' }); // Scroll to the left (previous testimonial)
+    }
+  }, 100);
+});
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -30,6 +86,19 @@ const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 };
+const clientsList = document.querySelector('.clients-list');
+
+clientsList.addEventListener('wheel', function(e) {
+  // Prevent default scroll behavior
+  e.preventDefault();
+
+  // Scroll the container horizontally based on scroll direction
+  if (e.deltaY > 0) {
+    clientsList.scrollBy({ left: 300, behavior: 'smooth' }); // Scroll to the right
+  } else {
+    clientsList.scrollBy({ left: -300, behavior: 'smooth' }); // Scroll to the left
+  }
+});
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {

@@ -507,6 +507,38 @@ main {
 .about-text p { margin-bottom: 15px; }
 
 
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 40px; /* Space above the slider section */
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.image-container {
+  width: 100%;
+  height: 350px; /* Set a fixed height for the container */
+  overflow: hidden; /* Hide any part of the image that overflows */
+  border-radius: 20px; /* Apply rounded corners to the container */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container area */
+}
+
 
 /**
  * #service 
