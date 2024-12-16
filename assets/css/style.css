@@ -686,6 +686,22 @@ main {
   object-fit: cover; /* Ensure the image covers the container area */
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .image-slider {
+    max-width: 100%; /* Take full width on smaller screens */
+  }
+
+  .image-container {
+    height: 250px; /* Adjust image container height for smaller screens */
+  }
+
+  .image-container img {
+    object-fit: cover; /* Keep the image responsive */
+  }
+}
+
+
 
 /**
  * #service 
