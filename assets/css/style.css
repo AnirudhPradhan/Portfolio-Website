@@ -514,14 +514,32 @@ main {
   align-items: center;
   margin-bottom: 40px;
 }
+.achievement-description1 {
+  font-size: 1rem;
+  color: #333; /* New color for text (dark grey for better readability) */
+}
+.achievement-description2 {
+  font-size: 1rem;
+  color: #333; /* New color for text (dark grey for better readability) */
+}
+.achievement-description3 {
+  font-size: 1rem;
+  color: #333; /* New color for text (dark grey for better readability) */
+}
 
-.achievement-box1 {
+/* Box 3 Styling */
+.achievement-box3 {
   width: 100%;
   max-width: 900px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('../images/gallery/WhatsApp Image 2024-12-03 at 11.01.36_72735ca1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 34); /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -530,13 +548,22 @@ main {
   text-align: center;
   transition: transform 0.3s ease;
 }
+
+
+
+/* Box 2 Styling */
 .achievement-box2 {
   width: 100%;
   max-width: 900px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('../images/gallery/Screenshot (262).png');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 34); /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -545,13 +572,21 @@ main {
   text-align: center;
   transition: transform 0.3s ease;
 }
-.achievement-box3 {
+
+
+/* Box 1 Styling */
+.achievement-box1 {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('../images/gallery/Screenshot (212).png'); /* Corrected URL path */
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 34); /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -559,36 +594,37 @@ main {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
-  margin: auto;
 }
 
-.achievement-box1:hover {
-  transform: translateY(-5px);
-}
-.achievement-box2:hover {
-  transform: translateY(-5px);
-}
+
+/* Hover Effects */
+.achievement-box1:hover,
+.achievement-box2:hover,
 .achievement-box3:hover {
   transform: translateY(-5px);
 }
 
+/* Title Styling */
 .achievement-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
+/* Description Styling */
 .achievement-description {
   font-size: 1rem;
-  color: #555;
+  color: #fff; /* Ensure visibility on backgrounds */
 }
 
+/* Link Styling */
 .achievement-link {
   text-decoration: none;
   color: inherit;
   width: 100%;
 }
 
+/* Projects Container Styling */
 .projects-container {
   display: flex;
   justify-content: space-between;
@@ -600,6 +636,7 @@ main {
   max-width: 48%;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .projects-container {
     flex-direction: column;
@@ -610,6 +647,7 @@ main {
     max-width: 100%;
   }
 }
+
 
 
 
@@ -713,16 +751,21 @@ main {
   margin: 0 -15px;
   padding: 25px 15px;
   padding-bottom: 35px;
-  overflow-x: auto;
+  overflow-x: auto; /* Allows horizontal scrolling */
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px;
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on touch devices */
+  min-width: 100%; /* Ensures that the container is wide enough to enable scrolling */
 }
 
-.testimonials-item {
-  min-width: 100%;
-  scroll-snap-align: center;
+.testimonial-item {
+  flex: 0 0 auto; /* Prevents shrinking */
+  width: 300px; /* Adjust as necessary */
+  scroll-snap-align: start; /* Makes items snap into view */
 }
+
 
 .testimonials-avatar-box {
   position: absolute;
