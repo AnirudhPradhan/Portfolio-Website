@@ -535,7 +535,7 @@ main {
   border: 1px solid #ddd;
   border-radius: 10px;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-              url('../images/gallery/WhatsApp Image 2024-12-03 at 11.01.36_72735ca1.jpg');
+              url('../images/gallery/prize.jpg');
   background-size: cover;
   background-position: center;
   color: rgb(255, 255, 34); /* Text color */
@@ -571,6 +571,7 @@ main {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
+  
 }
 
 
