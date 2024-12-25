@@ -184,6 +184,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 document.querySelectorAll('.has-scrollbar').forEach(scrollable => {
   scrollable.addEventListener('wheel', function (event) {
     event.preventDefault(); // Prevent vertical scrolling
-    this.scrollLeft += event.deltaY; // Adjust horizontal scrolling
+    this.scrollLeft += event.deltaY; // Adjust horizontal scrolling based on the wheel
   });
 });
