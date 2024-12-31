@@ -538,8 +538,8 @@ main {
               url('../images/gallery/prize.jpg');
   background-size: cover;
   background-position: center;
-  color: rgb(255, 255, 34); /* Text color */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
+  color: #fe680b; /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Enhances text visibility */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -562,8 +562,8 @@ main {
               url('../images/gallery/Screenshot (262).png');
   background-size: cover;
   background-position: center;
-  color: rgb(255, 255, 34); /* Text color */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
+  color: #fe680b; /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Enhances text visibility */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -586,8 +586,8 @@ main {
               url('../images/gallery/Screenshot (212).png'); /* Corrected URL path */
   background-size: cover;
   background-position: center;
-  color: rgb(255, 255, 34); /* Text color */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
+  color: #fe680b; /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Enhances text visibility */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
