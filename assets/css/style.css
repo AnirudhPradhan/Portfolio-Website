@@ -514,9 +514,49 @@ main {
   align-items: center;
   margin-bottom: 40px;
 }
+
+/* Publications Container - Two Columns */
+.publications-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.publications-container .achievement-link {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.publications-container .achievement-box3 {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 200px;
+}
+
+/* Responsive Design for Publications */
+@media (max-width: 768px) {
+  .publications-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .publications-container .achievement-link {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .publications-container .achievement-box3 {
+    width: 100%;
+  }
+}
 .achievement-description1 {
   font-size: 1rem;
   color: #333; /* New color for text (dark grey for better readability) */
+  margin: 0;
+  line-height: 1.6;
 }
 .achievement-description2 {
   font-size: 1rem;
@@ -531,7 +571,7 @@ main {
 .achievement-box3 {
   width: 100%;
   max-width: 900px;
-  padding: 20px;
+  padding: 25px 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
@@ -543,10 +583,19 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Publication 2 Box - Different Background */
+.achievement-box3-pub2 {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('../images/gallery/Publication2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -609,7 +658,8 @@ main {
 .achievement-title {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
 }
 
 /* Description Styling */
